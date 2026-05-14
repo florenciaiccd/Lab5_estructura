@@ -199,3 +199,13 @@ graph.c:34:11: error: unused variable ‘adjacencyMap’ [-Werror=unused-variabl
       |           ^~~~~~~~~~~~
 cc1: all warnings being treated as errors
 e01d2d5
+Thu May 14 08:53:24 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘createGraph’:
+graph.c:37:12: error: returning ‘Map *’ from a function with incompatible return type ‘Graph *’ [-Wincompatible-pointer-types]
+   37 |     return adjacencyMap;
+      |            ^~~~~~~~~~~~
+1f599bf
