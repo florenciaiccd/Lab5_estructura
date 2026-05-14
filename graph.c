@@ -31,10 +31,10 @@ Graph* createGraph() {
     if (grafo == NULL){
         return NULL;
     }
-    Map * adjacencyMap = map_create(is_equal_string);    
+    Graph  -> adjacencyMap = map_create(is_equal_string); 
+    
     
     return grafo;
-    return adjacencyMap;
 }
 
 void addNode(Graph* g, const char* label) {
