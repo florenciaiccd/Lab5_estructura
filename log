@@ -15,3 +15,20 @@ Thu May 14 08:19:23 PM UTC 2026:
  1 file changed, 2 insertions(+), 2 deletions(-)
  tests:  0|0
 096cad8
+Thu May 14 08:21:26 PM UTC 2026: 
+ graph.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘createGraph’:
+graph.c:31:40: error: invalid application of ‘sizeof’ to incomplete type ‘Map’
+   31 |     Map * adjacencyMap = malloc(sizeof(Map));
+      |                                        ^~~
+graph.c:31:11: error: unused variable ‘adjacencyMap’ [-Werror=unused-variable]
+   31 |     Map * adjacencyMap = malloc(sizeof(Map));
+      |           ^~~~~~~~~~~~
+graph.c:30:13: error: unused variable ‘grafo’ [-Werror=unused-variable]
+   30 |     Graph * grafo = malloc(sizeof(Graph));
+      |             ^~~~~
+cc1: all warnings being treated as errors
+6b4112a
