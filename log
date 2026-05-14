@@ -160,3 +160,12 @@ graph.c:34:11: error: unused variable ‘adjacencyMap’ [-Werror=unused-variabl
       |           ^~~~~~~~~~~~
 cc1: all warnings being treated as errors
 0dd9351
+Thu May 14 08:51:27 PM UTC 2026: 
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘createGraph’:
+graph.c:35:11: error: unused variable ‘adjacencyMap’ [-Werror=unused-variable]
+   35 |     Map * adjacencyMap = map_create(is_equal_string);
+      |           ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+282be2c
