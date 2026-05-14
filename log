@@ -121,3 +121,20 @@ graph.c:31:11: error: unused variable ‘adjacencyMap’ [-Werror=unused-variabl
       |           ^~~~~~~~~~~~
 cc1: all warnings being treated as errors
 7d755f0
+Thu May 14 08:49:14 PM UTC 2026: 
+ graph.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘createGraph’:
+graph.c:33:21: error: expected ‘;’ before ‘}’ token
+   33 |         return grafo
+      |                     ^
+      |                     ;
+   34 |     }
+      |     ~                
+graph.c:32:16: error: unused variable ‘adjacencyMap’ [-Werror=unused-variable]
+   32 |          Map * adjacencyMap = map_create(is_equal_string);
+      |                ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+12e4d2e
