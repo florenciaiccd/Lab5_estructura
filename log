@@ -85,3 +85,14 @@ Thu May 14 08:34:22 PM UTC 2026:
  1 file changed, 2 insertions(+), 2 deletions(-)
  tests:  0|0
 0956007
+Thu May 14 08:42:12 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘createGraph’:
+graph.c:31:11: error: unused variable ‘adjacencyMap’ [-Werror=unused-variable]
+   31 |     Map * adjacencyMap = map_create(is_equal_string);
+      |           ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+cc3626b
