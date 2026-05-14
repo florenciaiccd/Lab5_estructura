@@ -110,3 +110,14 @@ graph.c:30:13: error: unused variable ‘grafo’ [-Werror=unused-variable]
       |             ^~~~~
 cc1: all warnings being treated as errors
 41ac53a
+Thu May 14 08:45:23 PM UTC 2026: 
+ graph.c | 1 +
+ 1 file changed, 1 insertion(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘createGraph’:
+graph.c:31:11: error: unused variable ‘adjacencyMap’ [-Werror=unused-variable]
+   31 |     Map * adjacencyMap = map_create(is_equal_string);
+      |           ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+7d755f0
