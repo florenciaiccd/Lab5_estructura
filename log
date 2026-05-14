@@ -32,3 +32,17 @@ graph.c:30:13: error: unused variable ‘grafo’ [-Werror=unused-variable]
       |             ^~~~~
 cc1: all warnings being treated as errors
 6b4112a
+Thu May 14 08:22:21 PM UTC 2026: 
+ graph.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘createGraph’:
+graph.c:31:40: error: invalid application of ‘sizeof’ to incomplete type ‘Map’
+   31 |     Map * adjacencyMap = malloc(sizeof(Map));
+      |                                        ^~~
+graph.c:31:11: error: unused variable ‘adjacencyMap’ [-Werror=unused-variable]
+   31 |     Map * adjacencyMap = malloc(sizeof(Map));
+      |           ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+4ffbe2c
