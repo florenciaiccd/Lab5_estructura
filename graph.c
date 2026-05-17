@@ -39,7 +39,7 @@ Graph* createGraph() {
 
 void addNode(Graph* g, const char* label) {
     if (!g || !label) return;
-    const char * copia_label;
+    char * copia_label;
     
     copia_label = strdup(label);
     
