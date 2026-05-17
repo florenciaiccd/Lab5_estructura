@@ -60,7 +60,7 @@ void addEdge(Graph* g, const char* src, const char* dest, int weight) {
     nuevo_Edge -> weight = weight;
     nuevo_Edge -> target = copia_dest;
 
-    list_pushBack( g -> adjacencyMap -> src, nuevo_Edge);
+    list_pushBack( g -> adjacencyMap, nuevo_Edge);
     
 
 }
