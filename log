@@ -587,3 +587,9 @@ graph.c:94:35: error: ‘lista_aristas’ undeclared (first use in this function
 graph.c:94:35: note: each undeclared identifier is reported only once for each function it appears in
 cc1: all warnings being treated as errors
 c874736
+Sun May 17 11:54:14 PM UTC 2026: 
+ graph.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+ tests:  12|0
+========================================
+e84acc9
