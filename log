@@ -526,3 +526,29 @@ Sun May 17 11:43:05 PM UTC 2026:
  tests:  8|2
 ========================================
 c0d9fd8
+Sun May 17 11:49:35 PM UTC 2026: 
+ graph.c | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:88:57: error: ‘label’ undeclared (first use in this function); did you mean ‘label2’?
+   88 |     MapPair * pair = map_search(g->adjacencyMap, (void*)label);
+      |                                                         ^~~~~
+      |                                                         label2
+graph.c:88:57: note: each undeclared identifier is reported only once for each function it appears in
+graph.c:91:16: error: unused variable ‘lista_aristas’ [-Werror=unused-variable]
+   91 |         List * lista_aristas = (List*)pair -> value;
+      |                ^~~~~~~~~~~~~
+graph.c:94:35: error: ‘lista_aristas’ undeclared (first use in this function); did you mean ‘list_first’?
+   94 |     for(char* arista = list_first(lista_aristas); arista != NULL; arista = list_next(lista_aristas)){
+      |                                   ^~~~~~~~~~~~~
+      |                                   list_first
+graph.c:95:19: error: ‘i’ undeclared (first use in this function)
+   95 |         if(strcmp(i, label2) == 0){
+      |                   ^
+graph.c:96:27: error: request for member ‘weight’ in something not a structure or union
+   96 |             return arista -> weight;
+      |                           ^~
+cc1: all warnings being treated as errors
+4633542
