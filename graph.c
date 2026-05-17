@@ -53,14 +53,14 @@ void addEdge(Graph* g, const char* src, const char* dest, int weight) {
     if (!g || !src || !dest) return;
 
     
-    char copia_dest = strdup(dest);
+    char * copia_dest = strdup(dest);
     
     Edge * Edge = (Edge*)malloc(sizeof(Edge));
 
     Edge -> weight = weight;
     Edge -> target = copia_dest;
 
-    pushBack( g -> adjacencyMap -> src, Edge);
+    List_pushBack( g -> adjacencyMap -> src, Edge);
     
 
 }

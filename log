@@ -404,3 +404,20 @@ graph.c:63:33: error: invalid use of incomplete typedef ‘Map’
    63 |     pushBack( g -> adjacencyMap -> src, Edge);
       |                                 ^~
 0f39c2d
+Sun May 17 11:02:55 PM UTC 2026: 
+ graph.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:58:25: error: expected expression before ‘)’ token
+   58 |     Edge * Edge = (Edge*)malloc(sizeof(Edge));
+      |                         ^
+graph.c:63:5: error: implicit declaration of function ‘List_pushBack’; did you mean ‘list_pushBack’? [-Wimplicit-function-declaration]
+   63 |     List_pushBack( g -> adjacencyMap -> src, Edge);
+      |     ^~~~~~~~~~~~~
+      |     list_pushBack
+graph.c:63:38: error: invalid use of incomplete typedef ‘Map’
+   63 |     List_pushBack( g -> adjacencyMap -> src, Edge);
+      |                                      ^~
+af7b730
