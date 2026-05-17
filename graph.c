@@ -91,8 +91,8 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
         List * lista_aristas = (List*)pair -> value;
     }
 
-    for(char* arista = list_first(lista_aristas); arista != NULL; arista = list_next(lista_aristas)){
-        if(strcmp(arista, label2) == 0){
+    for(Edge* arista = list_first(lista_aristas); arista != NULL; arista = list_next(lista_aristas)){
+        if(strcmp(arista -> target, label2) == 0){
             return arista -> weight;
         }
     }
