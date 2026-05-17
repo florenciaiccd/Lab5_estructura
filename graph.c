@@ -40,6 +40,14 @@ Graph* createGraph() {
 void addNode(Graph* g, const char* label) {
     if (!g || !label) return;
 
+    MapPair * copia_label = (Map*)malloc(sizeof(MapPair));
+    
+    strcpy(copia_label, label);
+
+    List * nueva_lista = list_create();
+
+    map_insert(g, copia_label, nueva_lista);
+
     
 
 }
