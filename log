@@ -421,3 +421,13 @@ graph.c:63:38: error: invalid use of incomplete typedef ‘Map’
    63 |     List_pushBack( g -> adjacencyMap -> src, Edge);
       |                                      ^~
 af7b730
+Sun May 17 11:04:13 PM UTC 2026: 
+ graph.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:63:38: error: invalid use of incomplete typedef ‘Map’
+   63 |     list_pushBack( g -> adjacencyMap -> src, nuevo_Edge);
+      |                                      ^~
+fbd5643
