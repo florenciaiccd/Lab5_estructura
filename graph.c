@@ -45,7 +45,7 @@ void addNode(Graph* g, const char* label) {
 
     
     List * nueva_lista = list_create();
-    map_insert(g -> adjencyMap, copia_label, nueva_lista);
+    map_insert(g -> adjacencyMap, copia_label, nueva_lista);
 
     
 
