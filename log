@@ -319,3 +319,14 @@ map.h:18:22: note: expected ‘Map *’ but argument is of type ‘Graph *’
    18 | void map_insert(Map *map, void *key, void *value);
       |                 ~~~~~^~~
 0aa6d99
+Sun May 17 10:41:47 PM UTC 2026: 
+ graph.c | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addNode’:
+graph.c:48:21: error: ‘Graph’ has no member named ‘adjencyMap’; did you mean ‘adjacencyMap’?
+   48 |     map_insert(g -> adjencyMap, copia_label, nueva_lista);
+      |                     ^~~~~~~~~~
+      |                     adjacencyMap
+fa93482
