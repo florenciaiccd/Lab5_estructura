@@ -47,12 +47,21 @@ void addNode(Graph* g, const char* label) {
     
     map_insert(g -> adjacencyMap, copia_label, nueva_lista);
 
-    
-
 }
 
 void addEdge(Graph* g, const char* src, const char* dest, int weight) {
     if (!g || !src || !dest) return;
+
+    
+    char copia_dest = strdup(dest);
+    
+    List * Edge = (List*)malloc(sizeof(List));
+
+    Edge -> weight = weight;
+    Edge -> target = copia_dest;
+
+    pushBack( g -> adjacencyMap -> src, Edge);
+    
 
 }
 

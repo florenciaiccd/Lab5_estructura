@@ -355,3 +355,29 @@ Sun May 17 10:46:41 PM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 9729154
+Sun May 17 11:01:48 PM UTC 2026: 
+ graph.c | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:56:23: error: initialization of ‘char’ from ‘char *’ makes integer from pointer without a cast [-Wint-conversion]
+   56 |     char copia_dest = strdup(dest);
+      |                       ^~~~~~
+graph.c:58:40: error: invalid application of ‘sizeof’ to incomplete type ‘List’
+   58 |     List * Edge = (List*)malloc(sizeof(List));
+      |                                        ^~~~
+graph.c:60:10: error: invalid use of incomplete typedef ‘List’
+   60 |     Edge -> weight = weight;
+      |          ^~
+graph.c:61:10: error: invalid use of incomplete typedef ‘List’
+   61 |     Edge -> target = copia_dest;
+      |          ^~
+graph.c:63:5: error: implicit declaration of function ‘pushBack’; did you mean ‘list_pushBack’? [-Wimplicit-function-declaration]
+   63 |     pushBack( g -> adjacencyMap -> src, Edge);
+      |     ^~~~~~~~
+      |     list_pushBack
+graph.c:63:33: error: invalid use of incomplete typedef ‘Map’
+   63 |     pushBack( g -> adjacencyMap -> src, Edge);
+      |                                 ^~
+368ee09
