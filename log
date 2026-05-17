@@ -593,3 +593,26 @@ Sun May 17 11:54:14 PM UTC 2026:
  tests:  12|0
 ========================================
 e84acc9
+Sun May 17 11:58:43 PM UTC 2026: 
+ graph.c | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getAdjacentLabels’:
+graph.c:107:59: error: ‘label1’ undeclared (first use in this function); did you mean ‘label’?
+  107 |     MapPair * pair = map_search(g -> adjacencyMap, (void*)label1);
+      |                                                           ^~~~~~
+      |                                                           label
+graph.c:107:59: note: each undeclared identifier is reported only once for each function it appears in
+graph.c:113:104: error: expected ‘)’ before ‘{’ token
+  113 |         for(Edge* arista = list_first(lista_aristas); arista != NULL; arista = list_next(lista_aristas){
+      |            ~                                                                                           ^
+      |                                                                                                        )
+graph.c:118:5: error: expected expression before ‘}’ token
+  118 |     }
+      |     ^
+graph.c:111:16: error: unused variable ‘nueva_lista’ [-Werror=unused-variable]
+  111 |         List * nueva_lista = list_create();
+      |                ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+fe59f91
