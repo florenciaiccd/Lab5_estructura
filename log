@@ -283,3 +283,39 @@ map.h:18:22: note: expected ‘Map *’ but argument is of type ‘Graph *’
    18 | void map_insert(Map *map, void *key, void *value);
       |                 ~~~~~^~~
 8c5f2f0
+Sun May 17 10:37:42 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addNode’:
+graph.c:43:5: error: unknown type name ‘Node’
+   43 |     Node * copia_label = malloc(sizeof(Node));
+      |     ^~~~
+graph.c:43:40: error: ‘Node’ undeclared (first use in this function); did you mean ‘addNode’?
+   43 |     Node * copia_label = malloc(sizeof(Node));
+      |                                        ^~~~
+      |                                        addNode
+graph.c:43:40: note: each undeclared identifier is reported only once for each function it appears in
+graph.c:45:12: error: passing argument 1 of ‘strcpy’ from incompatible pointer type [-Wincompatible-pointer-types]
+   45 |     strcpy(copia_label, label);
+      |            ^~~~~~~~~~~
+      |            |
+      |            int *
+In file included from /nix/store/41pf3md9zgpda9kwh6rzn5kaddf7i0lp-glibc-2.40-66-dev/include/features.h:511,
+                 from /nix/store/41pf3md9zgpda9kwh6rzn5kaddf7i0lp-glibc-2.40-66-dev/include/bits/libc-header-start.h:33,
+                 from /nix/store/41pf3md9zgpda9kwh6rzn5kaddf7i0lp-glibc-2.40-66-dev/include/stdio.h:28,
+                 from test.c:1:
+/nix/store/41pf3md9zgpda9kwh6rzn5kaddf7i0lp-glibc-2.40-66-dev/include/bits/string_fortified.h:77:16: note: expected ‘char *’ but argument is of type ‘int *’
+   77 | __NTH (strcpy (__fortify_clang_overload_arg (char *, __restrict, __dest),
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+graph.c:49:16: error: passing argument 1 of ‘map_insert’ from incompatible pointer type [-Wincompatible-pointer-types]
+   49 |     map_insert(g, copia_label, nueva_lista);
+      |                ^
+      |                |
+      |                Graph *
+In file included from graph.c:8:
+map.h:18:22: note: expected ‘Map *’ but argument is of type ‘Graph *’
+   18 | void map_insert(Map *map, void *key, void *value);
+      |                 ~~~~~^~~
+0aa6d99
