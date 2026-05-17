@@ -476,3 +476,28 @@ graph.c:63:31: error: initialization of ‘List *’ from incompatible pointer t
       |                               ^~~~~~~~~~
 cc1: all warnings being treated as errors
 73b8bb2
+Sun May 17 11:18:05 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:63:64: error: passing argument 2 of ‘map_search’ discards ‘const’ qualifier from pointer target type [-Werror=discarded-qualifiers]
+   63 |     MapPair * lista_adyacencia = map_search(g -> adjacencyMap, src);
+      |                                                                ^~~
+In file included from graph.c:8:
+map.h:22:37: note: expected ‘void *’ but argument is of type ‘const char *’
+   22 | MapPair *map_search(Map *map, void *key);
+      |                               ~~~~~~^~~
+graph.c:65:19: error: passing argument 1 of ‘list_pushBack’ from incompatible pointer type [-Wincompatible-pointer-types]
+   65 |     list_pushBack(lista_adyacencia,nuevo_Edge);
+      |                   ^~~~~~~~~~~~~~~~
+      |                   |
+      |                   MapPair *
+In file included from graph.h:4,
+                 from graph.c:6:
+list.h:20:26: note: expected ‘List *’ but argument is of type ‘MapPair *’
+   20 | void list_pushBack(List *L, void *dato);
+      |                    ~~~~~~^
+cc1: all warnings being treated as errors
+972d9aa
