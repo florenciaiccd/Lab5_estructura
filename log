@@ -381,3 +381,26 @@ graph.c:63:33: error: invalid use of incomplete typedef ‘Map’
    63 |     pushBack( g -> adjacencyMap -> src, Edge);
       |                                 ^~
 368ee09
+Sun May 17 11:02:23 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:56:23: error: initialization of ‘char’ from ‘char *’ makes integer from pointer without a cast [-Wint-conversion]
+   56 |     char copia_dest = strdup(dest);
+      |                       ^~~~~~
+graph.c:58:25: error: expected expression before ‘)’ token
+   58 |     Edge * Edge = (Edge*)malloc(sizeof(Edge));
+      |                         ^
+graph.c:61:20: error: assignment to ‘char *’ from ‘char’ makes pointer from integer without a cast [-Wint-conversion]
+   61 |     Edge -> target = copia_dest;
+      |                    ^
+graph.c:63:5: error: implicit declaration of function ‘pushBack’; did you mean ‘list_pushBack’? [-Wimplicit-function-declaration]
+   63 |     pushBack( g -> adjacencyMap -> src, Edge);
+      |     ^~~~~~~~
+      |     list_pushBack
+graph.c:63:33: error: invalid use of incomplete typedef ‘Map’
+   63 |     pushBack( g -> adjacencyMap -> src, Edge);
+      |                                 ^~
+0f39c2d

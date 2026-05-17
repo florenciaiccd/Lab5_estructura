@@ -55,7 +55,7 @@ void addEdge(Graph* g, const char* src, const char* dest, int weight) {
     
     char copia_dest = strdup(dest);
     
-    List * Edge = (List*)malloc(sizeof(List));
+    Edge * Edge = (Edge*)malloc(sizeof(Edge));
 
     Edge -> weight = weight;
     Edge -> target = copia_dest;
