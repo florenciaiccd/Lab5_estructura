@@ -111,13 +111,12 @@ List* getAdjacentLabels(Graph* g, const char* label) {
         List * nueva_lista = list_create();
 
         for(Edge* arista = list_first(lista_aristas); arista != NULL; arista = list_next(lista_aristas){
-            list_pushBack(nueva_lista, arista -> target);
+            
+            list_pushBack(nueva_lista,arista -> target);
+            return nueva_lista;
+            
         }
-
-        return nueva_lista;
     }
-
-    return NULL; 
 }
 
 void destroyGraph(Graph* g) {
