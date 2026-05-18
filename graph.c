@@ -110,7 +110,7 @@ List* getAdjacentLabels(Graph* g, const char* label) {
         List * lista_aristas = (List*)pair -> value;
         List * nueva_lista = list_create();
 
-        for(Edge* arista = list_first(lista_aristas); arista != NULL; arista = list_next(lista_aristas){
+        for(Edge* arista = list_first(lista_aristas); arista != NULL; arista = list_next(lista_aristas)){
             
             list_pushBack(nueva_lista,arista -> target);
             return nueva_lista;

@@ -642,3 +642,19 @@ graph.c:120:1: error: control reaches end of non-void function [-Werror=return-t
       | ^
 cc1: all warnings being treated as errors
 941e953
+Mon May 18 12:08:00 AM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getAdjacentLabels’:
+graph.c:107:59: error: ‘label1’ undeclared (first use in this function); did you mean ‘label’?
+  107 |     MapPair * pair = map_search(g -> adjacencyMap, (void*)label1);
+      |                                                           ^~~~~~
+      |                                                           label
+graph.c:107:59: note: each undeclared identifier is reported only once for each function it appears in
+graph.c:120:1: error: control reaches end of non-void function [-Werror=return-type]
+  120 | }
+      | ^
+cc1: all warnings being treated as errors
+289a11b
