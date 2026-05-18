@@ -117,6 +117,7 @@ List* getAdjacentLabels(Graph* g, const char* label) {
             
         }
     }
+    return NULL;
 }
 
 void destroyGraph(Graph* g) {
